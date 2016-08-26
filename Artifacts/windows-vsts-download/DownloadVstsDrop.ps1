@@ -22,8 +22,8 @@ $uriParts = $vstsProjectUri.Split("/")
 $projectName = $uriParts[$uriParts.Length - 1]
 
 # Script Variables
-$outfile = $PSScriptRoot + "\" + $projectName + ".zip";
-$destination = $PSScriptRoot + "\" + $projectName;
+$outfile = "C:\" + "AprimoMarketing.zip";
+$destination = "C:\AprimoMarketing";
 
 function SetAuthHeaders
 {
