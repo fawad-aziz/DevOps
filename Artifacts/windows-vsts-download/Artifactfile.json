@@ -23,6 +23,6 @@
         }
     },
     "runCommand": {
-        "commandToExecute": "[concat('powershell.exe -ExecutionPolicy bypass -File DownloadVstsDropAndExecuteScript.ps1', ' -accessToken ', parameters('PersonalAccessToken'), ' -buildDefinitionName ', parameters('buildDefinitionName'), ' -vstsProjectUri ', parameters('vstsProjectUri')]"
+        "commandToExecute": "[concat('powershell.exe -ExecutionPolicy bypass -File DownloadVstsDrop.ps1', ' -accessToken ', parameters('PersonalAccessToken'), ' -buildDefinitionName ', parameters('buildDefinitionName'), ' -vstsProjectUri ', parameters('vstsProjectUri')]"
     }
 }
