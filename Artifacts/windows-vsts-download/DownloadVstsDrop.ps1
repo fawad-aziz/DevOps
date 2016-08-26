@@ -11,7 +11,7 @@ param(
     [string] $buildDefinitionName,
 
     [Parameter (Mandatory=$True)]
-    [string] $vstsProjectUri,
+    [string] $vstsProjectUri
 )
 
 Set-PSDebug -Strict
