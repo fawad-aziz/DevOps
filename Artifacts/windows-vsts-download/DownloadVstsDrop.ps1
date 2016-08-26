@@ -12,9 +12,6 @@ param(
 
     [Parameter (Mandatory=$True)]
     [string] $vstsProjectUri,
-
-    [Parameter (Mandatory=$True)]
-    [string] $pathToScript
 )
 
 Set-PSDebug -Strict
@@ -71,18 +68,6 @@ function DownloadBuildArtifacts
 
     [System.Reflection.Assembly]::LoadWithPartialName("System.IO.Compression.FileSystem") | Out-Null 
     [System.IO.Compression.ZipFile]::ExtractToDirectory($outfile, $destination)
-}
- 
-function RunScript
-{
-    $scriptPath = Join-Path -Path $destination -ChildPath $pathToScript 
-
-    Write-Output $scriptPath
-
-    if (Test-Path $scriptPath -PathType Leaf)
-    {
-        & $scriptPath 
-    }
 }
 
 DownloadBuildArtifacts
